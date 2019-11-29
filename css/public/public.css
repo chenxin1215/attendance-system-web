@@ -1,0 +1,16 @@
+﻿/**
+* <p>Description: 公共css</p> 
+* @author cx
+* @date 2018年12月7日
+*
+ */
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
