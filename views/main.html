@@ -5,9 +5,10 @@
 		<title>菜单页</title>
 		<link rel="stylesheet" type="text/css" href="../css/public/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/public/menu.css"/>
-		<link rel="stylesheet" type="text/css" href=""/>
+		<link rel="stylesheet" type="text/css" href="../css/index/public.css"/>
 		<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="wrapper" class="toggled">
@@ -19,19 +20,19 @@
 	                    <a href="#">林子大呀</a>
 	                    <span class="exit"></span>
 	                </li>
-	                <li>
+	                <li class="index_button">
 	                    <a href="#"><i class="fa fa-fw fa-plus"></i> 首页（打卡）</a>
 	                </li>
-	                <li>
-	                    <a href="#"><i class="fa fa-fw fa-search"></i> 考勤日志 </a>
+	                <li class="attendance_info_button">
+	                  	<a href="#"><i class="fa fa-fw fa-search"></i> 考勤记录</a>
 	                </li>
-	                 <li>
+	                <li class="overtime_button">
 	                    <a href="#"><i class="fa fa-fw fa-search"></i> 加班记录 </a>
 	                </li>
-	                <li>
+	                <li class="leave_button">
 	                    <a href="#"><i class="fa fa-fw fa-search"></i> 请假记录 </a>
 	                </li>
-	                <li>
+	                <li class="approve_button">
 	                    <a href="#"><i class="fa fa-fw fa-search"></i> 审批记录 </a>
 	                </li>
 	                <li class="dropdown">
@@ -45,6 +46,10 @@
 	                </li>
 	            </ul>
 	        </nav>
+   		</div>
+   		
+   		<div class="content">
+   			<iframe src="index.html" frameborder="0" id="frame"></iframe>
    		</div>
 	</body>
 </html>

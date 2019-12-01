@@ -1,0 +1,41 @@
+body{
+	background-color: #ffffff !important;
+}
+#dateTime{
+	width: 300px;
+	height: 50px;
+	font-family: "楷体";
+	font-size: 30px;
+	margin: auto;
+	padding-top: 100px;
+	color: dodgerblue;
+	line-height: 50px;
+}
+.submit_button{
+	margin-top: 150px;
+}
+.up-button{
+	
+}
+.down-button{
+	
+}
+.config-text{
+	margin-left: 320px;
+}
+.submit_button button{
+	/*background-color: dodgerblue;*/
+	border-radius: 100%;
+	border: none !important;
+	width: 150px;
+	height: 150px;
+}
+.uped-font{
+	font-size: 14px;
+	text-align: center;
+	background: #C2C2C2;
+	border: 0px;
+}
+.uped-font:hover{
+	background: #C2C2C2;
+}

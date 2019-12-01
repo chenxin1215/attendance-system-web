@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤管理页</title>
+		<link rel="stylesheet" type="text/css" href="../css/public/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public/public.css" />
+		<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div class="centercontent">
+			<div class="pageheader">
+				<center>
+					<h2 class="pagetitle">员工考勤管理</h2></center>
+			</div>
+			<hr />
+			<div class="contentwrapper">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<form action="" method="post">
+							<!--时间搜索-->
+							<div class="navbar-header col-lg-3 search-div">
+								<label for="dtp_input1" class="col-md-3 control-label navbar-header top-label">选择年月日:</label>
+								<div class="input-group date form_datetime col-md-8 " data-date="2019-12-01" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+									<input class="form-control" size="16" type="text" value="" id="datetime" readonly>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								</div>
+								<input type="hidden" id="dtp_input1" value="" /><br/>
+							</div>
+
+							<!--职位搜索-->
+							<div class="navbar-header col-lg-2 search-div">
+								<select class="form-control">
+									<option value="">选择职位</option>
+									<option value="">dq</option>
+									<option value="">cx</option>
+									<option value="">xx</option>
+								</select>
+							</div>
+
+							<!--关键字-->
+							<div class="navbar-header col-lg-2 search-div">
+								<input type="text" class="form-control" name="positionname" placeholder="员工姓名/员工工号/员工电话/杜倩">
+							</div>
+
+							<div class="navbar-header search-div">
+								<button type="submit" class="btn btn-primary"> 查 询</button>
+							</div>
+						</form>
+					</div>
+				</nav>
+
+				<div class="main_table">
+					<table class="table table-hover">
+						<!--<caption>职务信息</caption>-->
+						<thead>
+							<tr>
+								<th>员工工号</th>
+								<th>员工姓名</th>
+								<th>出勤天数</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody id="employeeTabs">
+							<tr>
+								<td>
+									<a href="#">
+										<a href="#">00001</a>
+									</a>
+								</td>
+								<td>张三</td>
+								<td>男</td>
+								<td>13973341321</td>
+								<td>3000</td>
+								<td>java工程师</td>
+								<td>
+									<a href="javascript:void(0);" class="btn btn-primary" onclick="deleteType()">查看本月详情</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">00001</a>
+								</td>
+								<td>张三</td>
+								<td>男</td>
+								<td>13973341321</td>
+								<td>3000</td>
+								<td>java工程师</td>
+								<td>
+									<a href="javascript:void(0);" class="btn btn-primary" onclick="deleteType()">查看本月详情</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">00001</a>
+								</td>
+								<td>张三</td>
+								<td>男</td>
+								<td>13973341321</td>
+								<td>3000</td>
+								<td>java工程师</td>
+								<td>
+									<a href="javascript:void(0);" class="btn btn-primary" onclick="deleteType()">查看本月详情</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">00001</a>
+								</td>
+								<td>张三</td>
+								<td>男</td>
+								<td>13973341321</td>
+								<td>3000</td>
+								<td>java工程师</td>
+								<td>
+									<a href="javascript:void(0);" class="btn btn-primary" onclick="deleteType()">查看本月详情</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">00001</a>
+								</td>
+								<td>张三</td>
+								<td>男</td>
+								<td>13973341321</td>
+								<td>3000</td>
+								<td>java工程师</td>
+								<td>
+									<a href="javascript:void(0);" class="btn btn-primary" onclick="deleteType()">查看本月详情</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--table-responsive end-->
+
+			</div>
+			<!--contentwrapper end-->
+	</body>
+
+</html>
