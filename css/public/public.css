@@ -13,4 +13,19 @@ html,body{
 	height: 100%;
 	width: 100%;
 }
+.search-div{
+	height: 50px !important;
+	display:flex;
+    -webkit-align-items:center;
+    align-items:center;
+    -webkit-justify-content:center;
+    justify-content:center;
+}
 
+.top-label{
+	margin: 0  !important;
+	padding: 0 !important;
+}
+.main_table{
+	margin-left: 15px;
+}
