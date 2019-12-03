@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人考勤记录详情页面</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/public/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index/attendance_detail.css" />
+		<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+
+		<div class="centercontent">
+			<div class="pageheader">
+				<center>
+					<h2 class="pagetitle">本月考勤详细信息</h2></center>
+			</div>
+			<hr />
+			<div class="contentwrapper">
+				<div class="main_table">
+					<div class="col-md-12 mb-3">
+						<h4><span class="label label-info">2018年12月</span></h4>
+					</div>
+					<div class="col-md-12 mb-3"><br></div>
+					<div class="form-row">
+						<div class="col-md-3 mb-3">
+							<label for="employeeId">员工工号</label>
+							<input type="text" class="form-control is-valid" id="employeeId" name="employeeId" placeholder="employeeId" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="employeeName">员工姓名</label>
+							<input type="text" class="form-control is-valid" id="employeeName" name="employeeName" placeholder="employeeName" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="position">员工职务</label>
+							<input type="text" class="form-control is-valid" id="position" name="position" placeholder="position" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="workDay">出勤天数</label>
+							<input type="text" class="form-control is-valid" id="workDay" name="workDay" placeholder="workDay" readonly>
+						</div>
+					</div>
+
+					<!--分隔-->
+					<div class="form-row">
+						<div class="col-md-12 mb-3"><br/></div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-3 mb-3">
+							<label for="latenessNum">迟到次数</label>
+							<input type="text" class="form-control is-invalid" id="latenessNum" name="latenessNum" placeholder="latenessNum" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="latenessTime">迟到时长</label>
+							<input type="text" class="form-control is-invalid" id="latenessTime" name="latenessTime" placeholder="latenessTime" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="earlyNum">早退次数</label>
+							<input type="text" class="form-control is-invalid" id="earlyNum" name="earlyNum" placeholder="earlyNum" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="earlyTime">早退时长</label>
+							<input type="text" class="form-control is-invalid" id="earlyTime" name="earlyTime" placeholder="earlyTime" readonly>
+						</div>
+					</div>
+
+					<!--分隔-->
+					<div class="form-row">
+						<div class="col-md-12 mb-3"><br/></div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-3 mb-3">
+							<label for="missNum">缺卡次数</label>
+							<input type="text" class="form-control is-invalid" id="missNum" name="missNum" placeholder="missNum" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="overtimeNum">加班次数</label>
+							<input type="text" class="form-control is-invalid" id="overtimeNum" name="overtimeNum" placeholder="overtimeNum" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="absenteeismDay">旷工天数</label>
+							<input type="text" class="form-control is-invalid" id="absenteeismDay" name="absenteeismDay" placeholder="absenteeismDay" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="leaveDay">请假天数</label>
+							<input type="text" class="form-control is-invalid" id="leaveDay" name="leaveDay" placeholder="leaveDay" readonly>
+						</div>
+					</div>
+
+					<!--分隔-->
+					<div class="form-row">
+						<div class="col-md-12 mb-3"><br/></div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-3 mb-3">
+							<label for="workTime">累计工作时间</label>
+							<input type="text" class="form-control is-invalid" id="workTime" name="workTime" placeholder="workTime" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="eaveTime">累计请假时间</label>
+							<input type="text" class="form-control is-invalid" id="eaveTime" name="eaveTime" placeholder="eaveTime" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="positionsalary">累计加班时间</label>
+							<input type="text" class="form-control is-invalid" id="overTime" name="overTime" placeholder="overTime" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="remainingTime">欠缺时间</label>
+							<input type="text" class="form-control is-invalid" id="remainingTime" name="remainingTime" placeholder="remainingTime" readonly>
+						</div>
+					</div>
+
+					<!--分隔-->
+					<div class="form-row">
+						<div class="col-md-12 mb-3"><br/></div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label for="slackTime">富余时间</label>
+							<input type="text" class="form-control is-invalid" id="slackTime" name="slackTime" placeholder="slackTime" readonly>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="averageWorkingHours">平均工作时间</label>
+							<input type="text" class="form-control is-invalid" id="averageWorkingHours" name="averageWorkingHours" placeholder="averageWorkingHours" readonly>
+						</div>
+					</div>
+				</div>
+				<!--table-responsive end-->
+			</div>
+			<!--contentwrapper end-->
+
+			<div class="col-md-12 mb-3 attendance_day_label">
+				<h4><span class="label label-info">每日打卡记录</span></h4>
+			</div>
+
+			<!-- 每天打卡情况 -->
+			<div class="attendance_day_content">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>日期</th>
+							<th>上班打卡时间</th>
+							<th>下班打卡时间</th>
+							<th>考勤状态 </th>
+						</tr>
+					</thead>
+					<tbody id="employeeTabs">
+						<tr>
+							<td>2019-12-03</td>
+							<td>2019-12-03 08:21:58</td>
+							<td>2019-12-03 18:01:58</td>
+							<td class="normal">正常</td>
+						</tr>
+						<tr>
+							<td>2019-12-04</td>
+							<td>2019-12-04 09:02:58</td>
+							<td>2019-12-04 18:01:58</td>
+							<td class="no_normal">迟到</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</body>
+
+</html>

@@ -29,3 +29,9 @@ html,body{
 .main_table{
 	margin-left: 15px;
 }
+.normal{
+	color: chartreuse;
+}
+.no_normal{
+	color: orange;
+}
