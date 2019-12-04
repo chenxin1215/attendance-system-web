@@ -28,6 +28,8 @@ html,body{
 }
 .main_table{
 	margin-left: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .normal{
 	color: chartreuse;
