@@ -15,6 +15,8 @@ $(function(){
 	$(".approve_button").click(function () {
 		$("#frame").attr("src","approve_info.html");
 	});
-	
+	$(".user-name").click(function(){
+		$("#frame").attr("src","person_info.html")
+	});
 	
 });
