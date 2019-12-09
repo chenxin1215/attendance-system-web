@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>审批记录管理</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/public/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index/leave_info.css"/>
+		<script src="../js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="centercontent">
+			<div class="pageheader">
+				<center>
+					<h2 class="pagetitle">审批记录</h2></center>
+			</div>
+			<hr />
+			<div class="contentwrapper">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<form action="" method="post">
+							<!--时间搜索-->
+							<div class="navbar-header col-lg-3 search-div">
+								<label for="dtp_input1" class="col-md-4 control-label navbar-header top-label">选择开始时间:</label>
+								<div class="input-group date form_datetime_day col-md-8 " data-date="2019-12-01" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+									<input class="form-control" size="16" type="text" value="" id="datetime" readonly>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								</div>
+								<input type="hidden" id="dtp_input1" value="" /><br/>
+							</div>
+							
+							<div class="navbar-header col-lg-3 search-div">
+								<label for="dtp_input1" class="col-md-4 control-label navbar-header top-label">选择结束时间:</label>
+								<div class="input-group date form_datetime_day col-md-8 " data-date="2019-12-02" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+									<input class="form-control" size="16" type="text" value="" id="datetime" readonly>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								</div>
+								<input type="hidden" id="dtp_input1" value="" /><br/>
+							</div>
+							
+							<!--关键字搜索-->
+							<div class="navbar-header col-lg-3 search-div">
+								<label for="dtp_input2" class="col-md-4 control-label navbar-header top-label">关键字搜索:</label>
+								<div class="col-md-8 " data-link-field="dtp_input2">
+									<input class="form-control" size="16" type="text" placeholder="键入工号/姓名搜索" value="" id="dtp_input2" >
+								</div>
+							</div>
+						</form>
+					</div>
+				</nav>
+				<div class="main_table">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>申请人工号</th>
+								<th>申请人姓名</th>
+								<th>审批类型</th>
+								<th>开始日期</th>
+								<th>结束日期</th>
+								<th>申请理由</th>
+								<th>审批状态</th>
+								<th>审批人</th>
+								<th>审批时间</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody id="attendanceInfoTabs">
+							<tr>
+								<td><a href="#">00001</a></td>
+								<td>小小</td>
+								<td>请假</td>
+								<td>2019-12-03</td>
+								<td>2019-12-04</td>
+								<td>老子要请假</td>
+								<td>已审核</td>
+								<td>cx</td>
+								<td>2019-12-02 19:25:12</td>
+								<td><button class="btn btn-primary" data-toggle="modal" data-target="#leaveModal">查看详情</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--table-responsive end-->
+			</div>
+			<!--contentwrapper end-->
+		</div>
+		<!--centercontent end-->
+		
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="myModalLabel">请假理由</h4>
+	            </div>
+	            <div class="modal-body">老子要休息</div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	            </div>
+	        </div><!-- /.modal-content -->
+		</div>
+		
+	</body>
+
+</html>

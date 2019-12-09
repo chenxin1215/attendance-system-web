@@ -1,10 +1,102 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 	<head>
-		<meta charset="utf-8" />
-		<title></title>
+		<!-- meta data -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/index/login-style.css">
+		<link rel="stylesheet" type="text/css" href="css/public/bootstrap.min.css">
+		<!--<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>-->
+
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/validity.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
+
+		<!-- signin end -->
+		<section class="signin">
+			<div class="container">
+
+				<div class="sign-content">
+					<h2>登  陆</h2>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="signin-form">
+								<form action="signin.html">
+									<div class="form-group">
+										<label for="signin_form">账号</label>
+										<input type="email" class="form-control" id="signin_form" 
+											placeholder="enter your account here" required>
+									</div>
+									<div class="form-group">
+										<label for="signin_form">密码</label>
+										<input type="password" class="form-control" 
+											id="signin_form" placeholder="Password" required>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="signin-password">
+								<div class="awesome-checkbox-list">
+									<ul class="unstyled centered">
+
+										<li>
+											<input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+											<label for="styled-checkbox-2">remember password</label>
+										</li>
+										<li>
+											<!-- 按钮触发模态框 -->
+											<a class="btn btn-lg" data-toggle="modal" 
+												data-target="#myModal">Forgot account or password ?
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<form id="loginTest">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="signin-footer">
+									<button type="submit" class="btn signin_btn" data-toggle="modal" data-target=".signin_modal">
+									sign in
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel">提示</h4>
+				</div>
+				<div class="modal-body">若忘记工号或密码则及时联系管理员！</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
 		
 	</body>
+
 </html>

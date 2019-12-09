@@ -1,0 +1,24 @@
+.contentwrapper{
+	position: relative;
+	left: 350px;
+}
+
+.submit_button button{
+	width: 150px;
+	height: 35px;
+}
+.uped-font{
+	font-size: 12px;
+	text-align: center;
+	background: #C2C2C2;
+	border: 0px;
+}
+.uped-font:hover{
+	background: #C2C2C2;
+}
+.radio label:first-child{
+	margin-left: 50px;
+}
+.radio-female{
+	margin-left: 90px;
+}

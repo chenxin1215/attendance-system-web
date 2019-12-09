@@ -18,7 +18,7 @@
 	            <ul class="nav sidebar-nav">
 	                <li class="sidebar-brand user-name">
 	                    <a href="#">林子大呀</a>
-	                    <span class="exit"></span>
+	                    <a href="../login.html"><span class="exit"></span></a>
 	                </li>
 	                <li class="index_button">
 	                    <a href="#"><i class="fa fa-fw fa-plus"></i> 首页（打卡）</a>
@@ -38,10 +38,11 @@
 	                <li class="dropdown">
 	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-cog"></i> 管理员功能 <span class="caret"></span></a>
 	                  <ul class="dropdown-menu" role="menu">
-	                    <li class="child-menu"><a href="#"><i class="fa fa-fw fa-cog"></i> 考勤规则配置 </a></li>
-	                    <li class="child-menu"><a href="#"><i class="fa fa-fw fa-cog"></i> 考勤记录管理 </a></li>
-	                    <li class="child-menu"><a href="#"><i class="fa fa-fw fa-cog"></i> 审批信息管理 </a></li>
-	                    <li class="child-menu"><a href="#"><i class="fa fa-fw fa-cog"></i> 员工管理 </a></li>
+	                  	<li class="child-menu" style="height: 0px !important;"></li>
+	                    <li class="child-menu attendance_rule_configure"><a href="#"><i class="fa fa-fw fa-cog"></i> 考勤规则配置 </a></li>
+	                    <li class="child-menu attendance_info_manage"><a href="#"><i class="fa fa-fw fa-cog"></i> 考勤记录管理 </a></li>
+	                    <li class="child-menu approve_info_manage"><a href="#"><i class="fa fa-fw fa-cog"></i> 审批信息管理 </a></li>
+	                    <li class="child-menu employee_manage"><a href="#"><i class="fa fa-fw fa-cog"></i> 员工管理 </a></li>
 	                  </ul>
 	                </li>
 	            </ul>
@@ -49,7 +50,7 @@
    		</div>
    		
    		<div class="content">
-   			<iframe src="attendance_detail.html" frameborder="0" id="frame"></iframe>
+   			<iframe src="index.html" frameborder="0" id="frame"></iframe>
    		</div>
 	</body>
 </html>

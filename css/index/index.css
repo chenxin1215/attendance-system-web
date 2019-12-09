@@ -7,18 +7,21 @@ body{
 	font-family: "楷体";
 	font-size: 30px;
 	margin: auto;
-	padding-top: 100px;
+	padding-top: 10px;
 	color: dodgerblue;
 	line-height: 50px;
 }
+.centercontent{
+	margin-left: 80px;
+}
 .submit_button{
-	margin-top: 150px;
+	
 }
 .up-button{
-	
+	margin-top: 100px;
 }
 .down-button{
-	
+	margin-top: 150px;
 }
 .config-text{
 	margin-left: 320px;
