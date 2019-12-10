@@ -24,7 +24,7 @@
 			<div class="contentwrapper">
 				<nav class="navbar navbar-default" role="navigation">
 					<div class="container-fluid">
-						<form action="" method="post">
+						<form id="attendanceTimeSearch" action="" method="post">
 							<!--时间搜索-->
 							<div class="navbar-header col-lg-3 search-div">
 								<label for="dtp_input1" class="col-md-4 control-label navbar-header top-label">选择年月搜索:</label>
@@ -61,7 +61,7 @@
 								<td>0 天</td>
 								<td>2 天</td>
 								<td>2019 年 12 月</td>
-								<td><a href="attendance_detail.html"><button class="btn btn-primary">查看本月详情</button></a></td>
+								<td><a href="attendance_detail.html"><button class="btn btn-primary" onclick="btn_monthDetail()">查看本月详情</button></a></td>
 							</tr>
 						</tbody>
 					</table>
