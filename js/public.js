@@ -1,3 +1,20 @@
+function getUser() {
+	$.ajax({
+		type:"post",
+		url:"login/getUser",  // 请求地址
+		async:false,
+		dataType : "json",
+		success:function(message){  
+			//成功后执行的函数  message为后台返回的数据集 json格式
+			if(message.rspCode == 1){
+				return message.rspData;
+			}else if(message.rspCode == -1){
+				alert(message.rspMsg);
+			}
+		}
+	});
+}
+
 $(function(){
 	
 	
