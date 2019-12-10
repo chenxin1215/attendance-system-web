@@ -1,28 +1,38 @@
 $(function(){
 	
-	var user = getUser();
-	if(user != null && user != ''){
-		$("#userNameBt").html(user.employeeName);
-	}
-	
-	// 获取个人信息
-	$("#userNameBt").click(function () {
-		
-		$.ajax({
+	$.ajax({
 		type:"post",
-		url:"login/queryEmployeeDetailById",  // 请求地址
+		url:"login/getUser",  // 请求地址
 		async:false,
 		dataType : "json",
 		success:function(message){  
 			//成功后执行的函数  message为后台返回的数据集 json格式
 			if(message.rspCode == 1){
-				
-				
+				$("#userNameBt").html(user.employeeName);
 			}else if(message.rspCode == -1){
 				alert(message.rspMsg);
 			}
 		}
 	});
+	
+	// 获取个人信息
+	$("#userNameBt").click(function () {
+		alert(1);
+		$.ajax({
+			type:"post",
+			url:"login/queryEmployeeDetailById",  // 请求地址
+			async:false,
+			dataType : "json",
+			success:function(message){  
+				//成功后执行的函数  message为后台返回的数据集 json格式
+				if(message.rspCode == 1){
+					
+					
+				}else if(message.rspCode == -1){
+					alert(message.rspMsg);
+				}
+			}
+		});
 	});
 	
 	$(".index_button").click(function(){

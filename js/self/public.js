@@ -1,23 +1,4 @@
-function getUser() {
-	$.ajax({
-		type:"post",
-		url:"login/getUser",  // 请求地址
-		async:false,
-		dataType : "json",
-		success:function(message){  
-			//成功后执行的函数  message为后台返回的数据集 json格式
-			if(message.rspCode == 1){
-				return message.rspData;
-			}else if(message.rspCode == -1){
-				alert(message.rspMsg);
-			}
-		}
-	});
-}
-
 $(function(){
-	
-	
 	/* 年月 */
 	$('.form_datetime_month').datetimepicker({
 	    format: 'yyyy-mm',
@@ -40,3 +21,21 @@ $(function(){
 		language:  'zh-CN',//汉化
 	});
 });
+
+
+//function getUser() {
+//	$.ajax({
+//		type:"post",
+//		url:"login/getUser",  // 请求地址
+//		async:false,
+//		dataType : "json",
+//		success:function(message){  
+//			//成功后执行的函数  message为后台返回的数据集 json格式
+//			if(message.rspCode == 1){
+//				return message.rspData;
+//			}else if(message.rspCode == -1){
+//				alert(message.rspMsg);
+//			}
+//		}
+//	});
+//}
