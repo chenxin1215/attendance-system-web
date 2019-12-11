@@ -13,6 +13,7 @@
 		<script src="../js/public/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/public/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/self/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/self/employee_manage.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -25,48 +26,38 @@
 			<div class="contentwrapper">
 				<nav class="navbar navbar-default" role="navigation">
 					<div class="container-fluid">
-						<form action="" method="post">
-							<!--时间搜索-->
-							<div class="navbar-header col-lg-3 search-div">
-								<label for="dtp_input1" class="col-md-4 control-label navbar-header top-label">选择年月搜索:</label>
-								<div class="input-group date form_datetime_month col-md-8 " data-date="2019-12-01" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-									<input class="form-control" size="16" type="text" value="" id="datetime" readonly>
-									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-								</div>
-								<input type="hidden" id="dtp_input1" value="" /><br/>
-							</div>
-
+						<form id="employeeForm">
 							<!--职位搜索-->
 							<div class="navbar-header col-lg-2 search-div">
-								<select class="form-control">
-									<option value="">选择职位</option>
-									<option value="">dq</option>
-									<option value="">cx</option>
-									<option value="">xx</option>
+								<select class="form-control" name="position">
+									<option value="0">选择职位</option>
+									<option value="1">CEO</option>
+									<option value="2">总监</option>
+									<option value="3">主管</option>
+									<option value="4">普通员工</option>
 								</select>
 							</div>
 							
 							<!--员工状态搜索-->
 							<div class="navbar-header col-lg-2 search-div">
-								<select name="" class="form-control">
-									<option value="" selected>员工状态</option>
-									<option value="1" >在职</option>
+								<select name="state" class="form-control">
+									<option value="1" selected>在职</option>
 									<option value="0">离职</option>
 								</select>
 							</div>
 
 							<!--关键字-->
 							<div class="navbar-header col-lg-2 search-div">
-								<input type="text" class="form-control" name="positionname" placeholder="员工姓名/员工工号/员工电话/杜倩">
+								<input type="text" class="form-control" name="keyword" placeholder="员工姓名/员工工号/员工电话">
 							</div>
 
 							<div class="navbar-header search-div">
-								<button type="submit" class="btn btn-primary"> 查 询</button>
+								<button type="button" class="btn btn-primary" id="searchEmpoyeeBt"> 查 询</button>
 							</div>
 							
 							<!--添加员工-->
 							<div class="submit_button">
-								<button type="button" class="btn btn-primary" >添加员工</button>
+								<button type="button" class="btn btn-primary" id="goInsertEmployeeBt" >添加员工</button>
 							</div>
 							
 						</form>

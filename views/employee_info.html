@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人基本信息</title>
+		<link rel="stylesheet" type="text/css" href="../css/public/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index/person_info.css">
+		<script src="../js/public/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/self/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/self/employee-info.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<div class="pageheader">
+			<center>
+				<h2 class="pagetitle">员工基本信息</h2></center>
+		</div>
+		<hr/>
+		<div class="contentwrapper">
+
+			<form id="employeeDetailForm">
+				<div class="main_table">
+					<input type="hidden" id="employeeId" name="employeeId" />
+					<div class="col-md-12 mb-3"><br></div>
+					<div class="form-row">
+						<div class="col-md-3 mb-3">
+							<label for="employeeId">员工工号</label>
+							<input type="text" class="form-control is-valid" id="employeeSn" name="employeeSn" placeholder="employeeId" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="employeeName">员工姓名</label>
+							<input type="text" class="form-control is-valid" id="employeeName" name="employeeName" placeholder="employeeName">
+						</div>
+					</div>
+					<!--分隔-->
+					<div class="form-row">
+						<div class="col-md-12 mb-3"><br/></div>
+					</div>
+					<div class="form-row">
+
+						<div class="form-row">
+							<div class="col-md-3 mb-3">
+								<label for="enter_date">入职日期</label>
+								<div class="input-group date form_datetime_day col-md-12" data-date="2019-12-01" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+									<input class="form-control enterDateStr" size="16" type="text" value="" id="datetime" name="enterDate" readonly>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								</div>
+							</div>
+							<div class="col-md-3 mb-3">
+								<label for="position">员工职务</label>
+								<select class="form-control" name="position">
+									<option value="0">选择职位</option>
+									<option value="1">CEO</option>
+									<option value="2">总监</option>
+									<option value="3">主管</option>
+									<option value="4">普通员工</option>
+								</select>
+							</div>
+						</div>
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+
+						<div class="col-md-3 mb-3">
+							<label for="employee_type">员工身份</label>
+							<select class="form-control" id="employeeTypeStr" name="employee_type">
+									<option value="1">普通员工</option>
+									<option value="2">管理员</option>
+								</select>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="sex">员工性别</label>
+							<select id="sex" name="sex" class="form-control">
+								<option value="1" selected>男</option>
+								<option value="0">女</option>
+							</select>
+						</div>
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+						<div class="form-row">
+							<div class="col-md-3 mb-3">
+								<label for="age">员工年龄</label>
+								<input type="text" class="form-control is-invalid" id="age" name="age" placeholder="age">
+							</div>
+							<div class="col-md-3 mb-3">
+								<label for="password">密码</label>
+								<input type="text" class="form-control is-invalid" id="password" name="password" placeholder="password">
+							</div>
+						</div>
+
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+
+						<div class="form-row ">
+							<div class="col-md-6 mb-6">
+								<label for="tel">联系方式</label>
+								<input type="text" class="form-control is-invalid" id="tel" name="tel" placeholder="tel">
+							</div>
+						</div>
+
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+
+						<div class="form-row ">
+							<div class="col-md-6 submit_button">
+								<button class="btn btn-primary center-block btn-info" savetype="0"  id="saveEmployeeBt">保  存</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>

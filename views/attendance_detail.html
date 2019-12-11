@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/index/attendance_detail.css" />
 		<script src="../js/public/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/public/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/self/attendance_detail.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -23,13 +24,16 @@
 			<div class="contentwrapper">
 				<div class="main_table">
 					<div class="col-md-12 mb-3">
-						<h4><span class="label label-info">2018年12月</span></h4>
+						<h4><span class="label label-info">
+							<font id="title_year">2018</font>年
+							<font id="title_month">12</font>月
+						</span></h4>
 					</div>
 					<div class="col-md-12 mb-3"><br></div>
 					<div class="form-row">
 						<div class="col-md-3 mb-3">
 							<label for="employeeId">员工工号</label>
-							<input type="text" class="form-control is-valid" id="employeeId" name="employeeId" placeholder="employeeId" readonly>
+							<input type="text" class="form-control is-valid" id="employeeSn" name="employeeSn" placeholder="employeeSn" readonly>
 						</div>
 						<div class="col-md-3 mb-3">
 							<label for="employeeName">员工姓名</label>
@@ -56,7 +60,7 @@
 							<input type="text" class="form-control is-invalid" id="latenessNum" name="latenessNum" placeholder="latenessNum" readonly>
 						</div>
 						<div class="col-md-3 mb-3">
-							<label for="latenessTime">迟到时长</label>
+							<label for="latenessTime">迟到时长(分钟)</label>
 							<input type="text" class="form-control is-invalid" id="latenessTime" name="latenessTime" placeholder="latenessTime" readonly>
 						</div>
 						<div class="col-md-3 mb-3">
@@ -64,7 +68,7 @@
 							<input type="text" class="form-control is-invalid" id="earlyNum" name="earlyNum" placeholder="earlyNum" readonly>
 						</div>
 						<div class="col-md-3 mb-3">
-							<label for="earlyTime">早退时长</label>
+							<label for="earlyTime">早退时长(分钟)</label>
 							<input type="text" class="form-control is-invalid" id="earlyTime" name="earlyTime" placeholder="earlyTime" readonly>
 						</div>
 					</div>
@@ -102,10 +106,6 @@
 						<div class="col-md-3 mb-3">
 							<label for="workTime">累计工作时间</label>
 							<input type="text" class="form-control is-invalid" id="workTime" name="workTime" placeholder="workTime" readonly>
-						</div>
-						<div class="col-md-3 mb-3">
-							<label for="eaveTime">累计请假时间</label>
-							<input type="text" class="form-control is-invalid" id="eaveTime" name="eaveTime" placeholder="eaveTime" readonly>
 						</div>
 						<div class="col-md-3 mb-3">
 							<label for="positionsalary">累计加班时间</label>
@@ -173,11 +173,13 @@
 						<tr>
 							<th>日期</th>
 							<th>上班打卡时间</th>
+							<th>上班打卡状态</th>
 							<th>下班打卡时间</th>
-							<th>考勤状态 </th>
+							<th>下班打卡状态</th>
+							<th>今天考勤状态 </th>
 						</tr>
 					</thead>
-					<tbody id="employeeTabs">
+					<tbody id="dayAttendanceTabs">
 						<tr>
 							<td>2019-12-03</td>
 							<td>2019-12-03 08:21:58</td>

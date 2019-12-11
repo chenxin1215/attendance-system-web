@@ -82,4 +82,17 @@ $(function(){
 	$(".employee_manage").click(function(){
 		$("#frame").attr("src","employee_manage.html")
 	});
+	$(".employee_insert").click(function () {
+		$.ajax({
+			type:"post",
+			url:"http://127.0.0.1:9090/admin/setAdminEmployeeId",
+			async:true,
+			dataType : "json",
+			data:{
+				employeeId : null
+			},
+			success:function(message){}
+		});
+		$("#frame").attr("src","employee_info.html");
+	});
 });
