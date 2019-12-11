@@ -2,38 +2,58 @@ $(function(){
 	
 	$.ajax({
 		type:"post",
-		url:"login/getUser",  // 请求地址
+		url:"http://127.0.0.1:9090/login/getUser", 
 		async:false,
 		dataType : "json",
-		success:function(message){  
-			//成功后执行的函数  message为后台返回的数据集 json格式
+		success:function(message){
 			if(message.rspCode == 1){
+				var user = message.rspData;
 				$("#userNameBt").html(user.employeeName);
+				$("#employeeIdVal").val(user.employeeId);
 			}else if(message.rspCode == -1){
 				alert(message.rspMsg);
 			}
 		}
 	});
 	
-	// 获取个人信息
+	$("#exit").click(function(){
+		if(confirm("确定退出登陆?")){
+		 　　$.ajax({
+				type:"post",
+				url:"http://127.0.0.1:9090/login/outLogin", 
+				async:false,
+				dataType : "json",
+				success:function(message){  
+					if(message.rspCode == 1){
+						window.location.href = "../login.html";
+					}else if(message.rspCode == -1){
+						alert(message.rspMsg);
+					}
+				}
+			});
+		}
+	});
+	
+	// 进入个人信息界面
 	$("#userNameBt").click(function () {
-		alert(1);
 		$.ajax({
 			type:"post",
-			url:"login/queryEmployeeDetailById",  // 请求地址
-			async:false,
+			url:"http://127.0.0.1:9090/employee/setEmployeeId",
+			async:true,
 			dataType : "json",
+			data:{
+				employeeId : $("#employeeIdVal").val()
+			},
 			success:function(message){  
-				//成功后执行的函数  message为后台返回的数据集 json格式
 				if(message.rspCode == 1){
-					
-					
+					$("#frame").attr("src","person_info.html");
 				}else if(message.rspCode == -1){
 					alert(message.rspMsg);
 				}
 			}
 		});
 	});
+	
 	
 	$(".index_button").click(function(){
 		$("#frame").attr("src","index.html");
@@ -49,9 +69,6 @@ $(function(){
 	});
 	$(".approve_button").click(function () {
 		$("#frame").attr("src","approve_info.html");
-	});
-	$(".user-name").click(function(){
-		$("#frame").attr("src","person_info.html")
 	});
 	$(".attendance_rule_configure").click(function(){
 		$("#frame").attr("src","attendance_rule_configure.html")

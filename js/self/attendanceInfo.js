@@ -1,22 +1,22 @@
 $(function() {
 
-	$("#attendanceTimeSearch").submit(function() {
-		$.ajax({
+	// 获取员工本月考勤信息
+	$.ajax({
 			type: "post",
-			url: "attendance/queryAttendanceInfoByParam", // 请求地址
+			url: "http://127.0.0.1:9090/attendance/queryAttendanceMonthInfoByParam",
 			async: false,
 			dataType: "json",
 			data: $(this).serialize(),
 			success: function(message) {
-				//成功后执行的函数  message为后台返回的数据集 json格式
 				if(message.rspCode == 1) {
-
+					var attendanceMonth = message.rspData;
+					// TODO
 				} else if(message.rspCode == -1) {
 					alert(message.rspMsg);
 				}
 			}
 		});
-	});
+	
 });
 
 function btn_monthDetail() {

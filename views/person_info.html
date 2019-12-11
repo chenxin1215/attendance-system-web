@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/index/person_info.css">
 		<script src="../js/public/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/public/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/self/person-info.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -19,93 +20,93 @@
 		</div>
 		<hr/>
 		<div class="contentwrapper">
-			<div class="main_table">
-				<div class="col-md-12 mb-3"><br></div>
-				<div class="form-row">
-					<div class="col-md-3 mb-3">
-						<label for="employeeId">员工工号</label>
-						<input type="text" class="form-control is-valid" id="employeeId" name="employeeId" placeholder="employeeId" readonly>
+
+			<form id="employeeDetailForm">
+				<div class="main_table">
+					<input type="hidden" id="employeeId" name="employeeId" />
+					<div class="col-md-12 mb-3"><br></div>
+					<div class="form-row">
+						<div class="col-md-3 mb-3">
+							<label for="employeeId">员工工号</label>
+							<input type="text" class="form-control is-valid" id="employeeSn" name="employeeSn" placeholder="employeeId" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="employeeName">员工姓名</label>
+							<input type="text" class="form-control is-valid" id="employeeName" name="employeeName" placeholder="employeeName" readonly>
+						</div>
 					</div>
-					<div class="col-md-3 mb-3">
-						<label for="employeeName">员工姓名</label>
-						<input type="text" class="form-control is-valid" id="employeeName" name="employeeName" placeholder="employeeName" readonly>
+					<!--分隔-->
+					<div class="form-row">
+						<div class="col-md-12 mb-3"><br/></div>
+					</div>
+					<div class="form-row">
+
+						<div class="form-row">
+							<div class="col-md-3 mb-3">
+								<label for="enter_date">入职日期</label>
+								<input type="text" class="form-control is-invalid" id="enterDateStr" name="enterDate" placeholder="enter_date" readonly>
+							</div>
+							<div class="col-md-3 mb-3">
+								<label for="position">员工职务</label>
+								<input type="text" class="form-control is-valid" id="positionStr" name="position" placeholder="position" readonly>
+							</div>
+						</div>
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+
+						<div class="col-md-3 mb-3">
+							<label for="employee_type">员工类型</label>
+							<input type="text" class="form-control is-invalid" id="employeeTypeStr" name="employee_type" placeholder="employee_type" readonly>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label for="sex">员工性别</label>
+							<select id="sex" name="sex" class="form-control">
+								<option value="1" selected>男</option>
+								<option value="0">女</option>
+							</select>
+						</div>
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+						<div class="form-row">
+							<div class="col-md-3 mb-3">
+								<label for="age">员工年龄</label>
+								<input type="text" class="form-control is-invalid" id="age" name="age" placeholder="age">
+							</div>
+							<div class="col-md-3 mb-3">
+								<label for="password">密码</label>
+								<input type="text" class="form-control is-invalid" id="password" name="password" placeholder="password">
+							</div>
+						</div>
+
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+
+						<div class="form-row ">
+							<div class="col-md-6 mb-6">
+								<label for="tel">联系方式</label>
+								<input type="text" class="form-control is-invalid" id="tel" name="tel" placeholder="tel">
+							</div>
+						</div>
+
+						<!--分隔-->
+						<div class="form-row">
+							<div class="col-md-12 mb-3"><br/></div>
+						</div>
+
+						<div class="form-row ">
+							<div class="col-md-6 submit_button">
+								<button class="btn btn-primary center-block btn-info" id="saveEmployeeBt">保  存</button>
+							</div>
+						</div>
 					</div>
 				</div>
-				<!--分隔-->
-				<div class="form-row">
-					<div class="col-md-12 mb-3"><br/></div>
-				</div>
-				<div class="form-row">
-
-					<div class="form-row">
-						<div class="col-md-3 mb-3">
-							<label for="enter_date">入职日期</label>
-							<input type="text" class="form-control is-invalid" id="enter_date" name="enter_date" placeholder="enter_date" readonly>
-						</div>
-						<div class="col-md-3 mb-3">
-							<label for="position">员工职务</label>
-							<input type="text" class="form-control is-valid" id="position" name="position" placeholder="position" readonly>
-						</div>
-					</div>
-					<!--分隔-->
-					<div class="form-row">
-						<div class="col-md-12 mb-3"><br/></div>
-					</div>
-
-					<div class="col-md-3 mb-3">
-						<label for="employee_type">员工类型</label>
-						<input type="text" class="form-control is-invalid" id="employee_type" name="employee_type" placeholder="employee_type" readonly>
-					</div>
-					<div class="col-md-3 mb-3">
-						<label for="sex">员工性别</label>
-						<select name="" class="form-control">
-							<option value="1" selected>男</option>
-							<option value="0">女</option>
-						</select>
-					</div>
-					<!--分隔-->
-					<div class="form-row">
-						<div class="col-md-12 mb-3"><br/></div>
-					</div>
-					<div class="form-row">
-						<div class="col-md-3 mb-3">
-							<label for="age">员工年龄</label>
-							<input type="text" class="form-control is-invalid" id="age" name="age" placeholder="age">
-						</div>
-						<div class="col-md-3 mb-3">
-							<label for="password">密码</label>
-							<input type="text" class="form-control is-invalid" id="password" name="password" placeholder="password">
-						</div>
-					</div>
-
-					<!--分隔-->
-					<div class="form-row">
-						<div class="col-md-12 mb-3"><br/></div>
-					</div>
-
-					<div class="form-row ">
-						<div class="col-md-6 mb-6">
-							<label for="tel">联系方式</label>
-							<input type="text" class="form-control is-invalid" id="tel" name="tel" placeholder="tel">
-						</div>
-					</div>
-
-					<!--分隔-->
-					<div class="form-row">
-						<div class="col-md-12 mb-3"><br/></div>
-					</div>
-
-					<div class="form-row ">
-						<div class="col-md-6 submit_button">
-							<button class="btn btn-primary center-block btn-info">保  存</button>
-						</div>
-
-						<!--<div class="submit_button col-md-6 mb-6">
-						<button class=" btn-info">保存</button>
-					</div>-->
-					</div>
-				</div>
-			</div>
+			</form>
 		</div>
 	</body>
 

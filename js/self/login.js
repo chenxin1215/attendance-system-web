@@ -1,18 +1,17 @@
 $(function() {
 	
-	$("#loginForm").submit(function() {
+	$("#login_bt").click(function() {
 		$.ajax({
 			type:"post",
-			url:"login/userLogin",  // 请求地址
-			async:false,
+			url:"http://127.0.0.1:9090/login/userLogin",
+			async:true,
 			dataType : "json",
-			data:$(this).serialize(),
-			success:function(message){  
-				//成功后执行的函数  message为后台返回的数据集 json格式
+			data:$("#loginForm").serialize(),
+			success:function(message){
 				if(message.rspCode == 1){
 					window.location.href = "views/main.html";
 				}else if(message.rspCode == -1){
-					alert(message.rspMsg);
+					alert(alert(message.rspMsg));
 				}
 			}
 		});

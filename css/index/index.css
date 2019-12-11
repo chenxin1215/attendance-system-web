@@ -38,6 +38,9 @@ body{
 	text-align: center;
 	background: #C2C2C2;
 	border: 0px;
+	pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
 }
 .uped-font:hover{
 	background: #C2C2C2;
